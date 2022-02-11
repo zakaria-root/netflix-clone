@@ -1,0 +1,11 @@
+.header_movie{
+  display: flex;
+}
+
+
+.header_movie > img {
+  display: flex;
+  object-fit: cover;
+  height: 50vh;
+  width: 100vw;
+}
