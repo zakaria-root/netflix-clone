@@ -1,0 +1,27 @@
+
+
+.row > h2 {
+  padding-left: 15px;
+  padding-bottom: 5px;
+}
+
+.row_content {
+  display: flex;
+  overflow-y: scroll;
+  align-items: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-left: 22px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.row_content::-webkit-scrollbar {
+  display: none;
+}
+
+.row_movie {
+  display: flex;
+  object-fit: contain;
+  width: 200px;
+  height: 300px;
+  padding: 10px;
+}
