@@ -19,7 +19,7 @@ function HeaderMovie({ fetchURL }) {
 
   return (
     <div className="header_movie">
-      <img src={BASPATH + movie.poster_path} alt={movie.original_title} />
+      <img src={BASPATH + movie.backdrop_path} alt={movie.original_title} />
 
     </div>
   );
