@@ -1,11 +1,16 @@
+import { useState } from "react";
 import "./App.css";
 import HeaderMovie from "./components/Banner/Banner";
+import Login from "./components/Login/Login";
 import Nav from "./components/Nav/Nav";
 import Row from "./components/Row/Row";
 import request from "./request";
 
 function App() {
-  return (
+
+  const [user, setUser] = useState('')
+  
+  return user ? (
     <div className="App">
       <Nav />
       <HeaderMovie fetchURL={request.fetchNetflixOriginals} />
@@ -19,7 +24,7 @@ function App() {
       <Row title="Docemtaries" fetchURL={request.fetchDocumentaries} />
       
     </div>
-  );
+  ) : (<Login />)
 }
 
 export default App;

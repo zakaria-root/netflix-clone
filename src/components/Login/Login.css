@@ -1,0 +1,114 @@
+.login {
+  background-image: url("http://s3-us-west-2.amazonaws.com/techvibes/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg");
+  width: 100vw;
+  height: 978px;
+  background-size: cover;
+  background-position: center;
+}
+
+.dark_background {
+  background-color: rgba(17, 17, 17, 0.678);
+  z-index: 1;
+  height: 978px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_netflix_login {
+  object-fit: contain;
+  height: 5rem;
+  left: 2rem;
+  top: 0.5rem;
+  position: absolute;
+}
+
+.singnin_section {
+  width: 387px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.746);
+  color: aliceblue;
+  padding: 5rem;
+  border-radius: 15px;
+}
+
+.signin_top_section {
+  font-size: 2rem;
+  padding-bottom: 2.6rem;
+  font-weight: bold;
+}
+.signin_input_section {
+  display: grid;
+  padding-bottom: 20px;
+  
+}
+.signin_input {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  flex: 1;
+  background-color: rgb(53, 53, 53);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 15px;
+  color: gray;
+}
+
+.signin_button_section {
+  display: flex;
+}
+
+.signin_buton {
+  padding: 15px;
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: rgb(206, 25, 25);
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+  margin: 3px;
+  transition: all 0.4s;
+}
+
+.signin_buton:hover {
+  background-color: rgb(131, 35, 35);
+  color: white;
+}
+.signin_bottom_section{
+  color: gray;
+}
+.fackbook_login{
+  display: flex;
+  padding-top: 1.5rem;
+  align-items: center;
+  color: gray;
+}
+
+.fackbook_login > img{
+  height: 1.8rem;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.signin_bottom_section > p{
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.signin_bottom_section > p > a{
+  text-decoration: none;
+  color: rgb(7, 136, 195);
+  font-weight: 600;
+}
+
+
+.signup{
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-left: 10px;
+  color: aliceblue;
+}
