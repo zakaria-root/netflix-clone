@@ -1,11 +1,13 @@
 import "./App.css";
-import HeaderMovie from "./components/HeaderMovie/HeaderMovie";
+import HeaderMovie from "./components/Banner/Banner";
+import Nav from "./components/Nav/Nav";
 import Row from "./components/Row/Row";
 import request from "./request";
 
 function App() {
   return (
     <div className="App">
+      <Nav />
       <HeaderMovie fetchURL={request.fetchNetflixOriginals} />
       <Row title="NETFLIX ORIGINAL" fetchURL={request.fetchNetflixOriginals} largMovies={true} />
       <Row title="Trending now" fetchURL={request.fetchTrending} />
