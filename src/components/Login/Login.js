@@ -1,8 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import { auth } from "../../db/firebase";
+import { provider } from "../../db/firebase";
+import { signInWithPopup } from "firebase/auth";
 
 function Login() {
+
+  const handleFacbookLogin = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+          console.log(result)
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return (
     <div className="login">
       <div className="dark_background">
@@ -25,14 +39,15 @@ function Login() {
               placeholder="Password"
             />
           </div>
-            <Link to="/">
-          <div className="signin_button_section">
+          <Link to="/">
+            <div className="signin_button_section">
               <button className="signin_buton">Sign In</button>
-          </div>
-            </Link>
+            </div>
+          </Link>
           <div className="signin_bottom_section">
             <div className="fackbook_login">
               <img
+                onClick={() => handleFacbookLogin()}
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/640px-Facebook_icon_2013.svg.png"
                 alt="facbook"
               />
