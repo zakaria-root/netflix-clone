@@ -1,11 +1,11 @@
 import axios from "../../axios";
 import React, { useEffect, useState } from "react";
 import "./Banner.css";
-const BASPATH = "https://image.tmdb.org/t/p/w500";
+const BASPATH = "https://image.tmdb.org/t/p/original";
 
 function HeaderMovie({ fetchURL }) {
   const [movie, setMovie] = useState({});
-  const PATH = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+  const PATH = "https://image.tmdb.org/t/p/original" + movie.backdrop_path;
 
   useEffect(() => {
     async function fetchMovies() {
@@ -19,9 +19,13 @@ function HeaderMovie({ fetchURL }) {
     fetchMovies();
   }, [fetchURL]);
 
-  function truncate(input, n) {
-    return input.length > n ? `${input.substring(0, n)}...` : input;
-  }
+  const truncate = (input) => {
+    
+    if (input.length >= 150 ) {
+      return `${input.substring(0, 149)}...`
+    }
+    return  input;
+  };
 
   return (
     <header
@@ -38,7 +42,7 @@ function HeaderMovie({ fetchURL }) {
           <button className="button_banner">Play</button>
           <button className="button_banner">My List</button>
         </div>
-        <h1 className="banner_discrih1tion"> {movie?.overview} </h1>
+        <h1 className="banner_discrih1tion"> { truncate(movie.overview) } </h1>
       </div>
       <div className="banner_bottom"></div>
     </header>

@@ -35,16 +35,18 @@
   object-fit: contain;
   width: 200px;
   height: 300px;
-  padding-left: 10px;
+  padding-left: 15px;
   transition: transform 450ms;
+  cursor: pointer;
 }
 
 .row_movie {
   display: flex;
   width: 223px;
   height: 125px;
-  padding-left: 10px;
+  padding-left: 15px;
   transition: transform 450ms;
+  cursor: pointer;
 }
 
 .row_movie:hover{

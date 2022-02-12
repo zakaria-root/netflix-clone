@@ -5,7 +5,7 @@ import axios from "../../axios";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
 
-const BASPATH = "https://image.tmdb.org/t/p/w500";
+const BASPATH = "https://image.tmdb.org/t/p/original";
 
 function Row({ title, fetchURL, largMovies }) {
   const [movies, setMovies] = useState([]);
@@ -36,7 +36,7 @@ function Row({ title, fetchURL, largMovies }) {
   }, [fetchURL]);
 
   const opts = {
-    height: "390",
+    height: "450",
     width: "100%",
     playerVars: {
       autoplay: 1,
