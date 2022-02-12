@@ -19,10 +19,10 @@ function HeaderMovie({ fetchURL }) {
     fetchMovies();
   }, [fetchURL]);
 
-  const truncate = (input) => {
+  const truncate = (input, n) => {
     
-    if (input.length >= 150 ) {
-      return `${input.substring(0, 149)}...`
+    if (input?.length > n ) {
+      return `${input.substr(0, n-1)}...`
     }
     return  input;
   };
@@ -42,7 +42,7 @@ function HeaderMovie({ fetchURL }) {
           <button className="button_banner">Play</button>
           <button className="button_banner">My List</button>
         </div>
-        <h1 className="banner_discrih1tion"> { truncate(movie.overview) } </h1>
+        <h1 className="banner_discrih1tion"> {truncate(movie.overview, 150)} </h1>
       </div>
       <div className="banner_bottom"></div>
     </header>
