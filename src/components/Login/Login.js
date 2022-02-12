@@ -1,9 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
-
-  
   return (
     <div className="login">
       <div className="dark_background">
@@ -26,19 +25,26 @@ function Login() {
               placeholder="Password"
             />
           </div>
+            <Link to="/">
           <div className="signin_button_section">
-            <button className="signin_buton">Sign In</button>
+              <button className="signin_buton">Sign In</button>
           </div>
+            </Link>
           <div className="signin_bottom_section">
             <div className="fackbook_login">
               <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/640px-Facebook_icon_2013.svg.png"
-              alt="facbook"
-            />
-            <p>Login with facboock</p>
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/640px-Facebook_icon_2013.svg.png"
+                alt="facbook"
+              />
+              <p>Login with facboock</p>
             </div>
-            <p>Now To Netflix? <span className="signup">Sign up New </span></p>
-            <p>This page is protected by Google roCAPTCHA to ensure you're not bot. <a href="#"> Learn more</a> </p>
+            <p>
+              Now To Netflix? <span className="signup">Sign up New </span>
+            </p>
+            <p>
+              This page is protected by Google roCAPTCHA to ensure you're not
+              bot. <a href="#"> Learn more</a>{" "}
+            </p>
           </div>
         </div>
       </div>

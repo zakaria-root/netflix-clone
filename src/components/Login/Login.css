@@ -57,10 +57,12 @@
 }
 
 .signin_button_section {
+  
   display: flex;
 }
 
 .signin_buton {
+  
   padding: 15px;
   flex: 1;
   font-size: 1.1rem;
