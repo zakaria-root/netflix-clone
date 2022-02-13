@@ -28,10 +28,12 @@
   position: fixed;
   left: 20px;
   top: 0px;
+  cursor: pointer;
 }
 
 .avatr_logo {
   height: 1.8rem;
   position: absolute;
   right: 63px;
+  cursor: pointer;
 }

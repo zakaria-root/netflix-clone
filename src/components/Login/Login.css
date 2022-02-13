@@ -40,7 +40,6 @@
 .signin_input_section {
   display: grid;
   padding-bottom: 20px;
-  
 }
 .signin_input {
   padding-top: 18px;
@@ -57,12 +56,10 @@
 }
 
 .signin_button_section {
-  
   display: flex;
 }
 
 .signin_buton {
-  
   padding: 15px;
   flex: 1;
   font-size: 1.1rem;
@@ -80,37 +77,46 @@
   background-color: rgb(131, 35, 35);
   color: white;
 }
-.signin_bottom_section{
+.signin_bottom_section {
   color: gray;
 }
-.fackbook_login{
+.fackbook_login {
   display: flex;
   padding-top: 1.5rem;
   align-items: center;
   color: gray;
 }
 
-.fackbook_login > img{
+.fackbook_login > img {
   height: 1.8rem;
   padding-right: 10px;
   cursor: pointer;
 }
 
-.signin_bottom_section > p{
+.signin_bottom_section > p {
   padding-top: 20px;
-  cursor: pointer;
 }
 
-.signin_bottom_section > p > a{
-  text-decoration: none;
+.signin_bottom_section > p > a {
+  /* text-decoration: none; */
   color: rgb(7, 136, 195);
   font-weight: 600;
 }
 
-
-.signup{
+.signup {
   font-size: 1.1rem;
   font-weight: 600;
   padding-left: 10px;
   color: aliceblue;
+  cursor: pointer;
+}
+
+.hidden_overview {
+  color: rgba(240, 248, 255, 0);
+  transition: all 0.5s;
+}
+
+.overview {
+  color: gray;
+  transition: all 0.5s;
 }

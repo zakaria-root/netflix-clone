@@ -1,8 +1,15 @@
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
+import { auth } from "../../db/firebase";
 import "./Nav.css";
 
 function Nav() {
   const [show, setShow] = useState(false);
+  const logout = () => {
+    signOut(auth).catch((error) => {
+      console.log(error.message);
+    });
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -25,6 +32,7 @@ function Nav() {
         alt="Netflix"
       />
       <img
+        onClick={() => logout()}
         className="avatr_logo"
         src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
         alt="avatar"

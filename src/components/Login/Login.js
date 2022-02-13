@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import { auth } from "../../db/firebase";
 import { provider } from "../../db/firebase";
-import { signInWithPopup } from "firebase/auth";
+import { withRouter, Redirect } from "react-router";
+import { onAuthStateChanged, signInWithPopup } from "firebase/auth";
+import { AuthContext } from "../Auth/AuthProvider";
 
-function Login() {
+function Login({history}) {
+  const [showOverview, setShowOverview] = useState(false);
 
-  const handleFacbookLogin = () => {
-    signInWithPopup(auth, provider)
+  const handleFacbookLogin = useCallback(async () => {
+    await signInWithPopup(auth, provider)
       .then((result) => {
-          console.log(result)
+        history.push("/")
       })
       .catch((error) => {
         console.log(error.message);
       });
-  };
+  },[history])
+  
+  const currentUser = useContext(AuthContext)
+  if (currentUser) 
+  {
+    <Redirect to={"/"} />
+  }
 
   return (
     <div className="login">
@@ -58,7 +67,18 @@ function Login() {
             </p>
             <p>
               This page is protected by Google roCAPTCHA to ensure you're not
-              bot. <a href="#"> Learn more</a>{" "}
+              bot.{" "}
+              <a onClick={() => setShowOverview(!showOverview)} href="#">
+                {" "}
+                Learn more
+              </a>{" "}
+            </p>
+            <p className={!showOverview ? "hidden_overview" : "overview"}>
+              The information collected by Google reCAPTCHA is subject to the
+              Google Privacy Policy and Terms of Service, and is used for
+              providing, maintaining, and improving the reCAPTCHA service and
+              for general security purposes (it is not used for personalized
+              advertising by Google).
             </p>
           </div>
         </div>
@@ -67,4 +87,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default withRouter(Login)
