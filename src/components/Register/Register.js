@@ -59,14 +59,7 @@ function Register({ history }) {
             </div>
 
             <div className="signin_bottom_section">
-              <div className="fackbook_Register">
-                <img
-                  onClick={() => handleFacbookRegister()}
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/640px-Facebook_icon_2013.svg.png"
-                  alt="facbook"
-                />
-                <p>Register with facboock</p>
-              </div>
+              
               <p>
                 Now To Netflix? <span className="signup">Sign in New </span>
               </p>
