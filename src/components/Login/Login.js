@@ -48,11 +48,10 @@ function Login({history}) {
               placeholder="Password"
             />
           </div>
-          <Link to="/">
+          
             <div className="signin_button_section">
               <button className="signin_buton">Sign In</button>
             </div>
-          </Link>
           <div className="signin_bottom_section">
             <div className="fackbook_login">
               <img
@@ -63,7 +62,7 @@ function Login({history}) {
               <p>Login with facboock</p>
             </div>
             <p>
-              Now To Netflix? <span className="signup">Sign up New </span>
+              Now To Netflix?<Link className="signup" to="/register"><span >Sign up Now </span></Link>
             </p>
             <p>
               This page is protected by Google roCAPTCHA to ensure you're not

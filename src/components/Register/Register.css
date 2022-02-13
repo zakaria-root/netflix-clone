@@ -1,4 +1,4 @@
-.login {
+.Register {
   background-image: url("http://s3-us-west-2.amazonaws.com/techvibes/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg");
   width: 100vw;
   height: 978px;
@@ -15,7 +15,7 @@
   justify-content: center;
 }
 
-.logo_netflix_login {
+.logo_netflix_Register {
   object-fit: contain;
   height: 5rem;
   left: 2rem;
@@ -80,14 +80,14 @@
 .signin_bottom_section {
   color: gray;
 }
-.fackbook_login {
+.fackbook_Register {
   display: flex;
   padding-top: 1.5rem;
   align-items: center;
   color: gray;
 }
 
-.fackbook_login > img {
+.fackbook_Register > img {
   height: 1.8rem;
   padding-right: 10px;
   cursor: pointer;
@@ -104,12 +104,6 @@
 }
 
 .signup {
-  text-decoration: none;
-  text-underline-offset: none;
-  
-}
-
-.signup > span{
   font-size: 1.1rem;
   font-weight: 600;
   padding-left: 10px;

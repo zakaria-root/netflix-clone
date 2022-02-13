@@ -5,7 +5,6 @@ import { AuthContext } from "./AuthProvider";
 
 function PrivetRoute({ component: ComponentRouter, ...rest }) {
 const { currentUser } = useContext(AuthContext);
-alert("provider:"+currentUser)
   return (
     <Route
       {...rest}
