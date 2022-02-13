@@ -6,11 +6,12 @@
 
 .banner_contents{
   font-size: xx-large;
-  color: aliceblue;
+  color: rgb(214, 222, 230);
   padding-left: 30px;
   padding-top: 7rem;
   font-weight: 800;
   height: 268px;
+  background-color: rgba(17, 17, 17, 0.507);
 }
 
 .button_banner_section{
@@ -26,7 +27,7 @@
   padding-bottom: 0.9em;
   margin-right: 20px;
   border-radius: 0px;
-  background-color: rgba(51,51,51,0.5) ;
+  background-color: rgba(42, 41, 41, 0.5) ;
   color: aliceblue;
   font-size: 0.8rem;
   border: none;
@@ -49,5 +50,5 @@
 
 .banner_bottom{
   height: 4.5em;
-  background-image: linear-gradient(180deg, transparent, rgb(37,37,37,0.61), #111);
+  background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.507), rgb(37,37,37,0.61), #111);
 }

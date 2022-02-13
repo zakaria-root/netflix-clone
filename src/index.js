@@ -9,12 +9,14 @@ import Login from "./components/Login/Login";
 import AuthProvider from "./components/Auth/AuthProvider";
 import PrivetRoute from "./components/Auth/PrivetRoute";
 import Register from "./components/Register/Register";
+import Profile from "./components/Profile/Profile";
 
 ReactDOM.render(
   <AuthProvider>
     <BrowserRouter>
-        <Route path="/login" component={Login} />
+        <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />
+        <Route path="/profile" exact component={Profile} />
         <PrivetRoute path="/" exact component={Home} />
     </BrowserRouter>
     </AuthProvider>,
