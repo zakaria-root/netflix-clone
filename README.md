@@ -1,6 +1,67 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Netflix Clone React
+> Functional Discord Clone written in javaScript using React Redux and Firebase
+
+
+ <h1 align="center">
+  <br>
+<img src='public/images/Screenshot_20220214_004512.png' width='900'/> 
+  <br/>
+</h1>
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+ just change the firebase
+
+To test the discord application
+you have to install the firebase first
+
+### `npm i firebase`
+
+change the firebase config by your firebase config and you don't forget to enable the google authentification
+
+finaly run your project by 
+
+### `npm start`
+
+<h1 align="center">
+  <br>
+  
+<img src='public/images/Screenshot_20220214_004412.png' width='900'/> 
+    <br> <br>
+  Main page
+  <br/>
+</h1>
+
+<h1 align="center">
+  <br>
+ 
+  <br>
+<img src='public/images/Screenshot_20220214_004659.png' width='900' />   <br> <br>
+   Login page
+  <br>
+</h1>
+
+
+
+
+
+## Features
+
+Implemented Features
+
+- [x] switch user
+- [x] login and logout
+- [x] Local Authentication width facbook acompt
+- [x] Local Authentication width email and password acompt
+- [x] Loads User Data upon login (users, Channels , messages of user)
+- [x] Creation and Joining Servers
+- [x] featch the movies
+- [x] trailer of the movies
+- [x] register a new user
+- [x] original netflix movie change when loading a page 
+- [x] show the current user login
+- [x] scroll horizontally between movies 
 
 ## Available Scripts
 
