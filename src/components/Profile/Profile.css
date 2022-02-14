@@ -1,0 +1,95 @@
+.profile {
+  text-align: center;
+  height: 978px;
+  background-color: rgb(32, 32, 32);
+  color: gray;
+}
+
+.title_profile {
+  font-size: 3.5rem;
+  padding-bottom: 30px;
+  font-weight: 500;
+  color: rgb(218, 228, 236);
+  padding-top: 15rem;
+}
+
+.avatar_profile:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
+  color: aliceblue;
+}
+
+.avatar_profile > img {
+  height: 7rem;
+  padding: 0.9rem;
+  cursor: pointer;
+}
+
+.row_avatar_profile {
+  display: flex;
+  justify-content: center;
+}
+
+.icon_profile {
+  padding: 1rem;
+}
+
+.icon_profile:hover {
+  color: rgb(212, 220, 228);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.manage_profile {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.manage_profile > p {
+  border: 1px solid gray;
+  padding: 5px;
+  margin-top: 16rem;
+  font-size: 1.2rem;
+  width: 320px;
+  padding: 10px;
+}
+
+.manage_profile > p:hover {
+  background-color: rgb(151, 158, 165);
+  color: rgb(0, 0, 0);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.manage_profile > p > span {
+  padding-left: 5px;
+}
+
+.logout_profile {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.logout_profile > p {
+  border: 1px solid gray;
+  padding: 5px;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  width: 320px;
+  padding: 10px;
+}
+
+.logout_profile > p:hover {
+  background-color: rgb(151, 158, 165);
+  color: rgb(0, 0, 0);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.logout_profile > p > span {
+  padding-left: 5px;
+}
+

@@ -1,37 +1,54 @@
 import React, { useCallback, useContext, useState } from "react";
 import "./Register.css";
-import { auth } from "../../db/firebase";
-import { provider } from "../../db/firebase";
+import app, { auth } from "../../db/firebase";
+import db, { provider } from "../../db/firebase";
 import { withRouter, Redirect } from "react-router";
 import { onAuthStateChanged, signInWithPopup } from "firebase/auth";
 import { AuthContext } from "../Auth/AuthProvider";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { addDoc, collection } from "firebase/firestore";
 
 function Register({ history }) {
   const [showOverview, setShowOverview] = useState(false);
+  const images = [
+    "https://ih0.redbubble.net/image.618427277.3222/flat,1000x1000,075,f.u2.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png",
+    "https://i.pinimg.com/originals/2b/90/0d/2b900d5612554cd0b5edf7d8e848c3ea.png",
+    "https://i.pinimg.com/474x/e3/94/30/e39430434d2b8207188f880ac66c6411.jpg",
+    "https://i.pinimg.com/originals/b6/77/cd/b677cd1cde292f261166533d6fe75872.png",
+  ]
+
 
   const handleFacbookRegister = useCallback(
     async (event) => {
       event.preventDefault();
-      const { email, pass, confirmPass } = event.target.elements;
+      const { email, pass, confirmPass, name } = event.target.elements;
       if (pass.value != confirmPass.value) {
         alert("!! Error of typing....");
       } else {
         createUserWithEmailAndPassword(auth, email.value, pass.value)
           .then((userCredential) => {
-            console.log("hihi" + userCredential);
-            history.push("/login")
+            const image = images[Math.floor(Math.random() * 5)];
+            const user = userCredential.user
+            addDoc(collection(db, "users"), {
+              uid :user.uid,
+              userName: name.value,
+              email: user.reloadUserInfo.email,
+              password: pass.value,
+              imageURL:image
+            });
+            history.push("/login");
           })
           .catch((error) => {
-            alert(error.message)
+            alert(error.message);
           });
       }
     },
     [history]
   );
 
-  const {currentUser} = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
   if (currentUser) {
     return <Redirect to={"/"} />;
   }
@@ -50,6 +67,12 @@ function Register({ history }) {
             <form onSubmit={handleFacbookRegister}>
               <h1 className="signin_top_section">Sign Up</h1>
               <div className="signin_input_section">
+              <input
+                  className="signin_input"
+                  type="text"
+                  name="name"
+                  placeholder="User Name"
+                />
                 <input
                   className="signin_input"
                   type="email"
