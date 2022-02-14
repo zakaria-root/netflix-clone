@@ -25,7 +25,7 @@ finaly run your project by
 ### `npm start`
 
 URL of application 
-### https://netflix-clone-38799.web.app/login
+>https://netflix-clone-38799.web.app/login
 
 <h1 align="center">
   <br>
