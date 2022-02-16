@@ -1,6 +1,6 @@
 
 ## Netflix Clone React
-> Functional Discord Clone written in javaScript using React Redux and Firebase
+> Functional netflix Clone written in javaScript using React and Firebase
 
 
  <h1 align="center">
